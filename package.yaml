@@ -1,4 +1,4 @@
-name:                mdToWeb
+name:                markdown-server
 version:             0.1.0.0
 github:              "matthew-pisano/MdToWeb"
 author:              "Matthew Pisano"
@@ -44,7 +44,7 @@ library:
     - Cabal
 
 executables:
-  mdToWeb-exe:
+  markdown-server-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -52,7 +52,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mdToWeb
+    - markdown-server
     - wai
     - warp
     - http-types
@@ -61,7 +61,7 @@ executables:
     - regex-posix
 
 tests:
-  mdToWeb-test:
+  markdown-server-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -69,4 +69,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - mdToWeb
+    - markdown-server

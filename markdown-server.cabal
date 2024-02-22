@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           mdToWeb
+name:           markdown-server
 version:        0.1.0.0
 description:    A simple markdown to HTML converter and server program.
 homepage:       https://github.com/matthew-pisano/MdToWeb#readme
@@ -25,7 +25,7 @@ library
       MdToHtml
       Server
   other-modules:
-      Paths_mdToWeb
+      Paths_markdown_server
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -40,17 +40,17 @@ library
     , warp
   default-language: Haskell2010
 
-executable mdToWeb-exe
+executable markdown-server-exe
   main-is: Main.hs
   other-modules:
-      Paths_mdToWeb
+      Paths_markdown_server
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , http-types
-    , mdToWeb
+    , markdown-server
     , regex-base
     , regex-posix
     , utf8-string
@@ -58,18 +58,18 @@ executable mdToWeb-exe
     , warp
   default-language: Haskell2010
 
-test-suite mdToWeb-test
+test-suite markdown-server-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_mdToWeb
+      Paths_markdown_server
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , http-types
-    , mdToWeb
+    , markdown-server
     , regex-base
     , regex-posix
     , utf8-string

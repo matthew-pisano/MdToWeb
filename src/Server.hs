@@ -11,7 +11,7 @@ import Data.ByteString.Lazy.UTF8 as BLU
 serve :: String -> IO ()
 serve content = do
   let port = 3000
-  putStrLn ("Listening on port " <> show port)
+  putStrLn ("Listening on http://localhost:" <> show port)
   run port (app content)
 
 app :: String -> Application
